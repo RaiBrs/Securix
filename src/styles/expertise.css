@@ -1,0 +1,133 @@
+.expertise {
+  padding-block: clamp(6rem, 10vw, 10rem);
+  background: #08080b;
+  border-top: 1px solid var(--color-border);
+}
+
+.expertise__heading {
+  margin-bottom: clamp(4rem, 8vw, 7rem);
+  text-align: center;
+}
+
+.expertise h2 { max-width: 16ch; margin-inline: auto; }
+.motion-ready .expertise__heading h2 {
+  transition: opacity 1050ms cubic-bezier(.16, 1, .3, 1),
+    transform 1050ms cubic-bezier(.16, 1, .3, 1),
+    filter 1050ms cubic-bezier(.16, 1, .3, 1);
+}
+.motion-ready .expertise__heading h2:not(.is-visible) {
+  opacity: .55;
+  transform: translateY(2.25rem) scale(.97);
+  filter: blur(2px);
+}
+.motion-ready .expertise__heading h2.is-visible { filter: blur(0); }
+.expertise__list { border-top: 1px solid #393440; }
+
+.expertise__item {
+  display: grid;
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: clamp(3rem, 8vw, 8rem);
+  min-height: min(74svh, 43rem);
+  padding-block: clamp(4rem, 8vw, 7rem);
+  border-bottom: 1px solid #393440;
+}
+
+.expertise__copy { min-width: 0; max-width: 34rem; }
+.expertise__number {
+  color: var(--color-violet-light);
+  font-size: .78rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .08em;
+}
+
+.expertise__copy h3 {
+  max-width: 16ch;
+  margin: 1.5rem 0 1.4rem;
+  font-size: clamp(2.3rem, 3.6vw, 3.8rem);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -.028em;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.expertise__copy p {
+  max-width: 30rem;
+  margin: 0;
+  color: #c5c2cc;
+  font-size: clamp(1rem, 1.15vw, 1.08rem);
+  line-height: 1.72;
+}
+
+.expertise__visual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  aspect-ratio: 1.36;
+  overflow: hidden;
+  border: 1px solid #393247;
+  border-radius: .9rem;
+  background: radial-gradient(ellipse at 50% 46%, #292036 0%, #17131f 43%, #0e0d13 82%);
+}
+
+.motion-ready .expertise__visual {
+  transition: opacity 900ms cubic-bezier(.16, 1, .3, 1), transform 900ms cubic-bezier(.16, 1, .3, 1), border-color 350ms ease, box-shadow 350ms ease;
+}
+.motion-ready .expertise__visual:not(.is-visible) { opacity: .35; transform: translateY(2.5rem) scale(.88); }
+.motion-ready .expertise__visual.is-visible { opacity: 1; transform: none; }
+.motion-ready .expertise__visual:not(.is-visible) .expertise-symbol { opacity: .35; transform: scale(.78) rotate(-7deg); }
+
+.expertise__visual::before {
+  content: '';
+  position: absolute;
+  inset: 1.25rem;
+  border: 1px solid rgba(157, 123, 255, .12);
+  border-radius: .5rem;
+  pointer-events: none;
+}
+
+.expertise-symbol {
+  width: 100%;
+  height: 100%;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  filter: drop-shadow(.5rem .8rem 1rem rgba(0, 0, 0, .32));
+  transition: transform 900ms cubic-bezier(.16, 1, .3, 1), opacity 900ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .expertise__visual:hover { border-color: #8d70d7; box-shadow: 0 1.5rem 3rem rgba(69, 42, 123, .24); }
+  .expertise__visual:hover .expertise-symbol { transform: translateY(-.35rem) scale(1.12); }
+}
+.expertise__item:nth-child(even) { grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); }
+.expertise__item:nth-child(even) .expertise__copy { order: 2; }
+.expertise__item:nth-child(even) .expertise__visual { order: 1; }
+
+@media (max-width: 899px) {
+  .expertise__item, .expertise__item:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+    min-height: 0;
+    padding-block: clamp(3.5rem, 8vw, 5rem);
+  }
+  .expertise__item:nth-child(even) .expertise__copy,
+  .expertise__item:nth-child(even) .expertise__visual { order: initial; }
+  .expertise__copy h3 { font-size: clamp(2.15rem, 6vw, 3.4rem); }
+  .expertise__visual { max-width: 42rem; }
+}
+
+@media (max-width: 599px) {
+  .expertise__heading { margin-bottom: 3rem; }
+  .expertise__item, .expertise__item:nth-child(even) { gap: 2rem; padding-block: 3.25rem; }
+  .expertise__copy h3 { margin: 1.1rem 0 1rem; font-size: clamp(2rem, 8vw, 2.8rem); }
+  .expertise__visual { aspect-ratio: 1.2; }
+  .expertise__visual::before { inset: .75rem; }
+  .expertise-symbol { padding: .75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-ready .expertise__heading h2 { filter: none; }
+  .expertise__visual, .expertise-symbol { transition: none; }
+  .expertise__visual:hover .expertise-symbol { transform: none; }
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="250" viewBox="0 0 1200 250" role="img" aria-labelledby="title description">
+  <title id="title">Stack da Securix</title>
+  <desc id="description">Banner grafite e violeta com as tecnologias React, TypeScript, Vite, CSS e Three.js.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#050507"/><stop offset="1" stop-color="#1a1228"/></linearGradient>
+    <linearGradient id="accent" x2="1" y2="0"><stop stop-color="#6545d8"/><stop offset="1" stop-color="#baa2ff"/></linearGradient>
+  </defs>
+  <rect x=".5" y=".5" width="1199" height="249" rx="13" fill="url(#bg)" stroke="#41334f"/>
+  <path d="M1 42h1198" stroke="#332b3e"/>
+  <g fill="none" stroke="#f5f5f7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" transform="translate(25 9)">
+    <path d="M8 12V8a6 6 0 0 1 12 0v4"/><path d="M4 12h20v11l-10 5L4 23V12Z"/>
+    <circle cx="14" cy="19" r="1" fill="#9d7bff" stroke="none"/>
+  </g>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <text x="64" y="27" fill="#f5f5f7" font-size="14" font-weight="600">Securix</text>
+    <text x="129" y="20" fill="#9d7bff" font-size="8">®</text>
+    <text x="1168" y="27" text-anchor="end" fill="#aaaab4" font-size="11" letter-spacing="1.3">STACK DO PROJETO</text>
+    <text x="50" y="98" fill="#f5f5f7" font-size="40" font-weight="600" letter-spacing="-1.3">Tecnologias por trás da experiência.</text>
+    <text x="52" y="128" fill="#aaaab4" font-size="16">Interface, responsividade, movimento e 3D em uma página estática.</text>
+  </g>
+  <g font-family="Inter, Segoe UI, Arial, sans-serif">
+    <g transform="translate(49 160)"><rect width="210" height="66" rx="8" fill="#17121f" stroke="#483957"/><path d="M12 1h186" stroke="url(#accent)" stroke-width="2"/><circle cx="29" cy="31" r="10" fill="none" stroke="#9d7bff" stroke-width="1.4"/><circle cx="29" cy="31" r="3" fill="#9d7bff"/><text x="50" y="34" fill="#f5f5f7" font-size="17" font-weight="600">React</text><text x="50" y="52" fill="#aaaab4" font-size="11">interface</text></g>
+    <g transform="translate(272 160)"><rect width="210" height="66" rx="8" fill="#17121f" stroke="#483957"/><path d="M12 1h186" stroke="url(#accent)" stroke-width="2"/><rect x="18" y="19" width="24" height="24" rx="4" fill="none" stroke="#9d7bff" stroke-width="1.4"/><text x="22" y="36" fill="#baa2ff" font-size="11" font-weight="700">TS</text><text x="50" y="34" fill="#f5f5f7" font-size="17" font-weight="600">TypeScript</text><text x="50" y="52" fill="#aaaab4" font-size="11">tipos</text></g>
+    <g transform="translate(495 160)"><rect width="210" height="66" rx="8" fill="#17121f" stroke="#483957"/><path d="M12 1h186" stroke="url(#accent)" stroke-width="2"/><path d="m19 20 10 24 12-24-12 7Z" fill="none" stroke="#9d7bff" stroke-width="1.4"/><text x="50" y="34" fill="#f5f5f7" font-size="17" font-weight="600">Vite</text><text x="50" y="52" fill="#aaaab4" font-size="11">ambiente e build</text></g>
+    <g transform="translate(718 160)"><rect width="210" height="66" rx="8" fill="#17121f" stroke="#483957"/><path d="M12 1h186" stroke="url(#accent)" stroke-width="2"/><path d="M18 20h23l-2 24-9 4-9-4Z" fill="none" stroke="#9d7bff" stroke-width="1.4"/><text x="50" y="34" fill="#f5f5f7" font-size="17" font-weight="600">CSS</text><text x="50" y="52" fill="#aaaab4" font-size="11">layout e motion</text></g>
+    <g transform="translate(941 160)"><rect width="210" height="66" rx="8" fill="#17121f" stroke="#483957"/><path d="M12 1h186" stroke="url(#accent)" stroke-width="2"/><path d="m19 25 11-6 11 6v12l-11 6-11-6Zm11-6v12m-11-6 11 6 11-6" fill="none" stroke="#9d7bff" stroke-width="1.3"/><text x="50" y="34" fill="#f5f5f7" font-size="17" font-weight="600">Three.js</text><text x="50" y="52" fill="#aaaab4" font-size="11">cadeado 3D</text></g>
+  </g>
+</svg>
